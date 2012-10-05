@@ -1,44 +1,54 @@
-set nocompatible
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore whitespace changes in diff mode:
+""""""""""""""""""""""""""""""""""""""""""""""""
+"set diffopt+=iwhite
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Force every buffer's fileformat=unix so that dos/Microsoft CR eol chars show up 
+"     as ^M (of fileformat=dos, vim won't show the CR/^M at all, so it looks like 
+"     an unix file):
+""""""""""""""""""""""""""""""""""""""""""""""""
+"set fileformats=unix
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Display unprintable chars (eg. tab="^I", unix eol (LF)="$")
+""""""""""""""""""""""""""""""""""""""""""""""""
+"set list
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Activate filetype plugins for:
+" - F5 to execute python module from within vim (see also ~/.vim/ftplugin/python.vim)
+" - intelligent indenting in python modules (see also ~/.vim/indent/python.vim)
+" - ...
+""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
-filetype indent on
+filetype plugin indent on
 
-augroup PO
-    autocmd FileType po compiler po
-augroup END
-
-" == netrw ======================================
-" Hide pyc files
-let g:netrw_list_hide='.*\.pyc$' 
-
-" == Editing ====================================
-syntax on
-set ruler
-set backspace=2
-set shiftwidth=4
-set tabstop=4
-set expandtab
-set autoindent
-set pastetoggle=<F3>
-set showmode
-
-" == Search =====================================
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-
-" == GVIM =======================================
-if has('gui_running')
-    set guioptions-=T
-    colorscheme desert
+""""""""""""""""""""""""""""""""""""""""""""""""
+" In diff mode, turn off syntax highlighting:
+""""""""""""""""""""""""""""""""""""""""""""""""
+if &diff
+syntax off
 endif
 
-" == XML ========================================
-ru macros/matchit.vim
+""""""""""""""""""""""""""""""""""""""""""""""""
+"Set tab to be '    ' (4 spaces):
+""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
 
-" == View Restore ===========================
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Stop auto line breaks
+""""""""""""""""""""""""""""""""""""""""""""""""
+set textwidth=80
+set wrapmargin=0
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Return to same place in file as last time
+""""""""""""""""""""""""""""""""""""""""""""""""
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+
