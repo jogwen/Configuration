@@ -48,6 +48,11 @@ set textwidth=80
 set wrapmargin=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" Highlight search term
+""""""""""""""""""""""""""""""""""""""""""""""""
+set hlsearch
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Return to same place in file as last time
 """"""""""""""""""""""""""""""""""""""""""""""""
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
