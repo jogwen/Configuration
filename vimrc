@@ -15,6 +15,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 "set list
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Mouse scrolls shell, not vim and allow copy from vim
+""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=r
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Activate filetype plugins for:
@@ -24,6 +29,14 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Run pylint on each save in a python file
+""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType python compiler pylint
+let g:pylint_onwrite = 0
+"let g:pylint_show_rate = 0
+"let g:pylint_cwindow = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " In diff mode, turn off syntax highlighting:
@@ -44,8 +57,8 @@ set expandtab
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Stop auto line breaks
 """"""""""""""""""""""""""""""""""""""""""""""""
-set textwidth=80
-set wrapmargin=0
+"set textwidth=80
+"set wrapmargin=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Highlight search term
@@ -57,3 +70,13 @@ set hlsearch
 """"""""""""""""""""""""""""""""""""""""""""""""
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Always show status bar (including filename)
+""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" CSS syntax highlighting for .less files
+""""""""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.less set filetype=less
