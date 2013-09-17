@@ -1,0 +1,1 @@
+alias gitgraph='git log --format="%h %c %cd %d %s" --date=short --graph'
