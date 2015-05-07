@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Ignore whitespace changes in diff mode:
 """"""""""""""""""""""""""""""""""""""""""""""""
-"set diffopt+=iwhite
+set diffopt+=iwhite
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Force every buffer's fileformat=unix so that dos/Microsoft CR eol chars show up 
