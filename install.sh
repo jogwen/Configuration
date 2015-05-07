@@ -13,7 +13,6 @@ ln -s $PWD/custom_bashrc_prompt ~/.custom_bashrc_prompt
 ln -s $PWD/custom_bashrc_gitgraph ~/.custom_bashrc_gitgraph
 ln -s $PWD/custom_bashrc_gitdiff ~/.custom_bashrc_gitdiff
 
-
 #################################################################
 # finish off installing vimdiff-like 'git diff':
 #################################################################
@@ -27,11 +26,11 @@ chmod u+x ~/bin/git_diff_wrapper
 #################################################################
 # vim customisations:
 #################################################################
-#
-##ln -s $PWD/vimrc ~/.vimrc
-##ln -s $PWD/vim/ftplugin/python.vim ~/.vim/ftplugin/python.vim
-##mkdir -p ~/.vim/indent
-##ln -s $PWD/vim/indent/python.vim ~/.vim/indent/python.vim
-#
-#
-echo "\n\nNow do \"source ~/.bashrc\" to get full effect.\n"
+ln -s $PWD/vimrc ~/.vimrc
+mkdir -p ~/.vim/ftplugin
+ln -s $PWD/vim/ftplugin/python.vim ~/.vim/ftplugin/python.vim
+mkdir -p ~/.vim/indent
+ln -s $PWD/vim/indent/python.vim ~/.vim/indent/python.vim
+
+
+echo "\n\nNow run \"source ~/.bashrc\" to complete installation.\n"
