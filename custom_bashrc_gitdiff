@@ -1,3 +1,4 @@
+echo "WARNING: appending new dir to \$PATH (currently $PATH)"
 export PATH=$PATH:~/bin
 
 function git_diff() {
