@@ -33,8 +33,8 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Run pylint on each save in a python file
 """"""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python compiler pylint
-let g:pylint_onwrite = 0
+"autocmd FileType python compiler pylint
+"let g:pylint_onwrite = 0
 "let g:pylint_show_rate = 0
 "let g:pylint_cwindow = 0
 
