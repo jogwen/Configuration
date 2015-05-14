@@ -1,6 +1,3 @@
-echo "WARNING: appending new dir to \$PATH (currently $PATH)"
-export PATH=$PATH:~/bin
-
 function git_diff() {
     git diff --no-ext_diff -w "$@" | vim -R -
 }
