@@ -5,6 +5,7 @@ set makeprg=pep8\ --ignore=E501\ %
 " Line number toggling
 function! NumberToggle()
   if(&relativenumber == 1)
+    set norelativenumber
     set number
   else
     set relativenumber
@@ -28,7 +29,10 @@ set path+=/usr/local/lib/python2.7/site-packages
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Red-coloured column 80 as guide for reasonable length lines
+" Dark green coloured columns 80 and 90 as guide for reasonable length lines
 """"""""""""""""""""""""""""""""""""""""""""""""
-set colorcolumn=80
+set colorcolumn=80,90
+highlight ColorColumn ctermbg=0
+" see :help ctermbg for colours, although they don't always seem to match up
+" to reality!
 
