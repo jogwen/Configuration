@@ -3,12 +3,16 @@ export EDITOR=/usr/bin/vim
 # Make vim always open multiple files in separate tabs (-p flag has no effect for one file):
 alias vim='vim -p'
 
+alias gitresetperms='git diff --no-ext-diff -p -R | grep -E "^(diff|(old|new) mode)" | git apply'
+
 # For command prompt that tells you the virtualenv, git branch, git status:
 source ~/.custom_bashrc_prompt
 # For command 'gitgraph' that shows sensibly formatted git history
 source ~/.custom_bashrc_gitgraph
 # For vimdiff-based 'git diff':
 source ~/.custom_bashrc_gitdiff
+# For d-c shorthand for docker-compose:
+source ~/.custom_bashrc_docker-compose
 
 # Other custom env vars:
 export CLONE_DIR=/home/joanna/Code2/telemarq/coda_ordovician/numed_clone_dir/
