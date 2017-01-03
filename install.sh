@@ -3,18 +3,18 @@
 #################################################################
 # bashrc customisations:
 #################################################################
-# source our main file from the current user's .bashrc (back it up first)
-echo "Creating backup before editing: ~/.bashrc.orig"
-cp -p ~/.bashrc ~/.bashrc.orig
-echo "source ~/.custom_bashrc" >> ~/.bashrc
 # Create symlinks to our sub-config files:
 ln -s $PWD/custom_bashrc ~/.custom_bashrc
 ln -s $PWD/custom_bashrc_prompt ~/.custom_bashrc_prompt
 ln -s $PWD/custom_bashrc_gitgraph ~/.custom_bashrc_gitgraph
 ln -s $PWD/custom_bashrc_gitdiff ~/.custom_bashrc_gitdiff
+# Now source our main file from the current user's .bashrc (back it up first)
+echo "Creating backup before editing: ~/.bashrc.orig"
+cp -p ~/.bashrc ~/.bashrc.orig
+echo "source ~/.custom_bashrc" >> ~/.bashrc
 
 #################################################################
-# finish off installing vimdiff-like 'git diff':
+# Finish off installing vimdiff-like 'git diff':
 #################################################################
 echo "Creating backup before editing: ~/.gitconfig.orig"
 cp -p ~/.gitconfig ~/.gitconfig.orig
