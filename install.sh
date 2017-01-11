@@ -10,6 +10,7 @@ ln -s $PWD/custom_bashrc_gitgraph ~/.custom_bashrc_gitgraph
 ln -s $PWD/custom_bashrc_gitdiff ~/.custom_bashrc_gitdiff
 # Now source our main file from the current user's .bashrc (back it up first)
 echo "Creating backup before editing: ~/.bashrc.orig"
+touch ~/.bashrc
 cp -p ~/.bashrc ~/.bashrc.orig
 echo "source ~/.custom_bashrc" >> ~/.bashrc
 
@@ -17,10 +18,10 @@ echo "source ~/.custom_bashrc" >> ~/.bashrc
 # Finish off installing vimdiff-like 'git diff':
 #################################################################
 echo "Creating backup before editing: ~/.gitconfig.orig"
+touch ~/.gitconfig
 cp -p ~/.gitconfig ~/.gitconfig.orig
 echo "[diff]\n    external = git_diff_wrapper\n[pager]\n    diff =" >> ~/.gitconfig
-mkdir -p ~/bin
-printf '#!/bin/sh\n\nvimdiff "$2" "$5"\n' > ~/bin/git_diff_wrapper
+printf '#!/bin/sh\n\nvimdiff "$2" "$5"\n' > /usr/local/bin/git_diff_wrapper
 chmod u+x ~/bin/git_diff_wrapper
 
 #################################################################

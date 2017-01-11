@@ -1,4 +1,4 @@
-Configuration for vim behaviour
+Configuration for vim (and git diff) behaviour
 ============
 
 Features include (but not limited to):
