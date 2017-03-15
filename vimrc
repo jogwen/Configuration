@@ -39,8 +39,9 @@ filetype plugin indent on
 "let g:pylint_cwindow = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-" In diff mode, turn off syntax highlighting:
+" Turn on syntax highlighting, but not in diff mode:
 """"""""""""""""""""""""""""""""""""""""""""""""
+syntax on
 if &diff
 syntax off
 endif
