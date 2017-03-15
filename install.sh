@@ -33,5 +33,9 @@ ln -s $PWD/vim/ftplugin/python.vim ~/.vim/ftplugin/python.vim
 mkdir -p ~/.vim/indent
 ln -s $PWD/vim/indent/python.vim ~/.vim/indent/python.vim
 
+#################################################################
+# install binaries:
+#################################################################
+ln -s $PWD/bins/vaultgrep /usr/local/bin/vaultgrep
 
 echo "\n\nNow run \"source ~/.bashrc\" to complete installation.\n"

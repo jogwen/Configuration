@@ -1,0 +1,13 @@
+#! /bin/bash
+
+if [[ $# -ne 2 ]]; then
+    echo Usage: $(basename $0) PASSWORD_FILE TEXT
+    echo
+    echo Search down through directory hierarchy for Ansible vaults containing TEXT
+    exit 1
+fi
+
+find . -name '*.yml' -print0 |
+     xargs -0 grep -l '^\$ANSIBLE_VAULT' | 
+     xargs -t -n 1 ansible-vault --vault-password-file=$1 view | 
+     grep "$2"
