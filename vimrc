@@ -76,6 +76,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """"""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Show line and col numbers in status bar
+""""""""""""""""""""""""""""""""""""""""""""""""
+set ruler
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " CSS syntax highlighting for .less files
