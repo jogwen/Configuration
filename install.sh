@@ -8,6 +8,7 @@ ln -s $PWD/custom_bashrc ~/.custom_bashrc
 ln -s $PWD/custom_bashrc_prompt ~/.custom_bashrc_prompt
 ln -s $PWD/custom_bashrc_gitgraph ~/.custom_bashrc_gitgraph
 ln -s $PWD/custom_bashrc_gitdiff ~/.custom_bashrc_gitdiff
+ln -s $PWD/custom_bashrc_docker-compose ~/.custom_bashrc_docker-compose
 # Now source our main file from the current user's .bashrc (back it up first)
 echo "Creating backup before editing: ~/.bashrc.orig"
 touch ~/.bashrc
