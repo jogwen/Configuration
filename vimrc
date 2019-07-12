@@ -1,7 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Ignore whitespace changes in diff mode:
+" Ignore whitespace changes and always wrap lines in diff mode:
 """"""""""""""""""""""""""""""""""""""""""""""""
 set diffopt+=iwhite
+" Following from https://stackoverflow.com/a/16867953/2017600
+au VimEnter * if &diff | execute 'windo set wrap' | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Force every buffer's fileformat=unix so that dos/Microsoft CR eol chars show up 
