@@ -9,6 +9,8 @@ ln -s $PWD/custom_bash_profile_prompt ~/.custom_bash_profile_prompt
 ln -s $PWD/custom_bash_profile_gitgraph ~/.custom_bash_profile_gitgraph
 ln -s $PWD/custom_bash_profile_gitdiff ~/.custom_bash_profile_gitdiff
 ln -s $PWD/custom_bash_profile_docker-compose ~/.custom_bash_profile_docker-compose
+# Install bash-completion using brew to make the following work.
+ln -s $PWD/custom_bash_profile_bash_completion ~/.custom_bash_profile_bash_completion
 # Now source our main file from the current user's .bash_profile (back it up first)
 echo "Creating backup before editing: ~/.bash_profile.orig"
 touch ~/.bash_profile

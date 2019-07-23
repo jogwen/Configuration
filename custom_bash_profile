@@ -13,6 +13,8 @@ source ~/.custom_bash_profile_gitgraph
 source ~/.custom_bash_profile_gitdiff
 # For d-c shorthand for docker-compose:
 source ~/.custom_bash_profile_docker-compose
+# For tab completion of eg hostnames from .ssh/config etc
+source ~/.custom_bash_profile_bash_completion
 
 # Other custom env vars:
 export CLONE_DIR=/home/joanna/Code2/telemarq/coda_ordovician/numed_clone_dir/
