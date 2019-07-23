@@ -16,14 +16,18 @@ cp -p ~/.bashrc ~/.bashrc.orig
 echo "source ~/.custom_bashrc" >> ~/.bashrc
 
 #################################################################
+# Install binaries:
+#################################################################
+ln -s $PWD/bins/git_diff_wrapper /usr/local/bin/git_diff_wrapper
+ln -s $PWD/bins/vaultgrep /usr/local/bin/vaultgrep
+
+#################################################################
 # Finish off installing vimdiff-like 'git diff':
 #################################################################
 echo "Creating backup before editing: ~/.gitconfig.orig"
 touch ~/.gitconfig
 cp -p ~/.gitconfig ~/.gitconfig.orig
 echo "[diff]\n    external = git_diff_wrapper\n[pager]\n    diff =" >> ~/.gitconfig
-printf '#!/bin/sh\n\nvimdiff "$2" "$5"\n' > /usr/local/bin/git_diff_wrapper
-chmod u+x ~/bin/git_diff_wrapper
 
 #################################################################
 # vim customisations:
@@ -33,10 +37,5 @@ mkdir -p ~/.vim/ftplugin
 ln -s $PWD/vim/ftplugin/python.vim ~/.vim/ftplugin/python.vim
 mkdir -p ~/.vim/indent
 ln -s $PWD/vim/indent/python.vim ~/.vim/indent/python.vim
-
-#################################################################
-# install binaries:
-#################################################################
-ln -s $PWD/bins/vaultgrep /usr/local/bin/vaultgrep
 
 echo "\n\nNow run \"source ~/.bashrc\" to complete installation.\n"
