@@ -1,5 +1,5 @@
 # Command prompt formatting
-# source this from your .bashrc
+# source this from your .bash_profile
 
 #################################################################################
 RED="\[\033[0;31m\]"

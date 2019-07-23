@@ -6,13 +6,13 @@ alias vim='vim -p'
 alias gitresetperms='git diff --no-ext-diff -p -R | grep -E "^(diff|(old|new) mode)" | git apply'
 
 # For command prompt that tells you the virtualenv, git branch, git status:
-source ~/.custom_bashrc_prompt
+source ~/.custom_bash_profile_prompt
 # For command 'gitgraph' that shows sensibly formatted git history
-source ~/.custom_bashrc_gitgraph
+source ~/.custom_bash_profile_gitgraph
 # For vimdiff-based 'git diff':
-source ~/.custom_bashrc_gitdiff
+source ~/.custom_bash_profile_gitdiff
 # For d-c shorthand for docker-compose:
-source ~/.custom_bashrc_docker-compose
+source ~/.custom_bash_profile_docker-compose
 
 # Other custom env vars:
 export CLONE_DIR=/home/joanna/Code2/telemarq/coda_ordovician/numed_clone_dir/
